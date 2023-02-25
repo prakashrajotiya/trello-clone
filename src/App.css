@@ -1,3 +1,10 @@
+:root{
+  --bgtheme:#dbeafe;
+}
 .sidebar{
   height:calc(100vh - 50px);
+  background-color:var(--bgtheme);
+}
+.header{
+  background-color:var(--bgtheme);
 }
