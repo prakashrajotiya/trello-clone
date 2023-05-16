@@ -1,6 +1,21 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import themeContext from "../context/ThemeContext";
+import { useContext } from "react";
 const Header = () => {
+  const { theme, setTheme } = useContext(themeContext);
+
+  const changeTheme = () => {
+    const myTheme = theme=='light'?'dark':'light';
+    setTheme(myTheme)
+    const HTMLTag = document.getElementsByTagName('HTML')[0]
+    if(myTheme=='dark'){
+      HTMLTag.classList.add('dark')
+    }
+    else{
+      HTMLTag.classList.remove('dark')
+
+    }
+  };
   return (
     <header className={`header flex p-3 border`}>
       <div>
@@ -11,8 +26,8 @@ const Header = () => {
         />
       </div>
       <div className="ml-auto">
-        {/* <button onClick={changeTheme}>
-           
+        <button onClick={changeTheme}>
+          {theme == 'light' ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -33,7 +48,7 @@ const Header = () => {
                 <polygon points="444 228 468 228 468 204 444 204"></polygon>
               </g>
             </svg>
-          
+          ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -59,8 +74,8 @@ const Header = () => {
                 <polygon points="444 228 468 228 468 204 444 204"></polygon>
               </g>
             </svg>
-        
-        </button> */}
+          )}
+        </button>
       </div>
     </header>
   );

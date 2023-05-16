@@ -1,5 +1,14 @@
 :root{
   --bgtheme:#dbeafe;
+  --bgwhite:#fff;
+}
+:root.dark{
+  
+  --bgtheme:grey;
+  --bgwhite:#a7a7a7;
+}
+.bg-light{
+  background-color:var(--bgwhite);
 }
 .sidebar{
   height:calc(100vh - 50px);
