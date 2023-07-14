@@ -10,12 +10,12 @@ const List = () => {
   const dispatch = useDispatch();
   const deleteListFn = (id) => {
     console.log("id", id);
-    dispatch(deleteList(id));
+    dispatch(deleteList({id}));
   };
   return (
     <>
       {listItem.map((list) => (
-        <div className="p-3 w-1/3" key={list.id}>
+        <div className="p-3 w-full md:w-1/3" key={list.id}>
           <div
             className={`p-3 bg-gray-100`}
           >
@@ -40,7 +40,7 @@ const List = () => {
         </div>
       ))}
 
-      <div className="p-3 w-1/3">
+      <div className="p-3 w-full md:w-1/3">
         <div className={`p-3 bg-gray-100 `}>
           <AddNew />
         </div>

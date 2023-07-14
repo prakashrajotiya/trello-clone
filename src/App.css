@@ -13,7 +13,13 @@
 .sidebar{
   height:calc(100vh - 50px);
   background-color:var(--bgtheme);
+  
 }
 .header{
   background-color:var(--bgtheme);
+}
+@media only screen and (max-width:767px) {
+  .sidebar{
+    display: none;
+  }
 }

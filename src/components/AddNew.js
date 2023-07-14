@@ -47,7 +47,7 @@ const AddNew = ({ type, parentId }) => {
             value={inputVal}
             onChange={updateInput}
             className="w-full h-10 p-2"
-            placeholder={type ? "Enter Card Name" : "Enter List Name"}
+            placeholder={type ? "Enter a title for this card..." : "Enter list title..."}
           />
           {/* <span></span> */}
           <div className="mt-3">
