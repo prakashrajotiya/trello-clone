@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import themeContext from "../context/ThemeContext";
 import { useContext } from "react";
 const Header = () => {
