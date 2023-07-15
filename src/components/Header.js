@@ -5,10 +5,10 @@ const Header = () => {
   const { theme, setTheme } = useContext(themeContext);
 
   const changeTheme = () => {
-    const myTheme = theme=='light'?'dark':'light';
+    const myTheme = theme==='light'?'dark':'light';
     setTheme(myTheme)
     const HTMLTag = document.getElementsByTagName('HTML')[0]
-    if(myTheme=='dark'){
+    if(myTheme==='dark'){
       HTMLTag.classList.add('dark')
     }
     else{
@@ -27,7 +27,7 @@ const Header = () => {
       </div>
       <div className="ml-auto">
         <button onClick={changeTheme}>
-          {theme == 'light' ? (
+          {theme === 'light' ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
